@@ -52,3 +52,11 @@ for (let i = 1; i < 100; i++) {
             break;
     }
 }
+
+//? Slution #3
+
+const fizzBuzzMehtod = (n, w) => (num) => num % n === 0 ? w : '';
+const fizzMethod = fizzBuzzMehtod(3, 'Fizz');
+const buzzMethod = fizzBuzzMehtod(5, 'Buzz');
+
+[...Array(99).keys()].map(i => i + 1).forEach(i => console.log(fizzMethod(i) + buzzMethod(i) || i));
