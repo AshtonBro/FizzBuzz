@@ -1,7 +1,6 @@
 "use script";
 
 //? Solution #1
-
 for (let i = 1; i < 100; i++) {
     console.log(i);
 
@@ -17,7 +16,6 @@ for (let i = 1; i < 100; i++) {
 }
 
 //? Solution #2
-
 const fizzBuzz = (n) => {
     if (n % 3 === 0 && n % 5 === 0) {
         return true;
@@ -54,9 +52,21 @@ for (let i = 1; i < 100; i++) {
 }
 
 //? Slution #3
-
 const fizzBuzzMehtod = (n, w) => (num) => num % n === 0 ? w : '';
 const fizzMethod = fizzBuzzMehtod(3, 'Fizz');
 const buzzMethod = fizzBuzzMehtod(5, 'Buzz');
 
 [...Array(99).keys()].map(i => i + 1).forEach(i => console.log(fizzMethod(i) + buzzMethod(i) || i));
+
+//? Solution #4
+
+const array = [];
+for (let i = 1; i < 100; i++) {
+    array.push(i);
+}
+
+const result = array.map((num) => {
+    num % 3 === 0 && num % 5 === 0 ? console.log('FizzBuzz: ', num) :
+        num % 3 === 0 ? console.log('Fizz: ', num) :
+        num % 5 === 0 ? console.log('Buzz: ', num) : num;
+});
